@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rectangle Checker</title>
+  </head>
+  <body>
+    <h2>Is it a square?</h2>
+
+    <p>Your rectangle's length is @Model["ResultingRectangle"].GetLength()</p>
+    <p>Your rectangle's width is @Model["ResultingRectangle"].GetWidth()</p>
+
+    @if (@Model["ResultingRectangle"].IsSquare())
+    {
+      <h4>Your rectangle is a square!</h4>
+      <p>Surface area of a cube with those dimensions: @Model["ResultingCube"].GetSurfaceArea()</p>
+      <p>Volume of a cube with those dimensions: @Model["ResultingCube"].GetVolume()</p>
+    }
+    else
+    {
+      <h4>Your rectangle isn't a square!</h4>
+    }
+    <p><a href="/rectangles">Make another rectangle!</a></p>
+  </body>
+</html>
